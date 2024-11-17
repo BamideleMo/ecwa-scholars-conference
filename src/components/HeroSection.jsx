@@ -1,9 +1,8 @@
 import { A } from "@solidjs/router";
-import heroImg from "./assets/images/ECWA-Scholars-Conference.png";
+import heroImg from "../assets/images/ECWA-Scholars-Conference.png";
 import { createSignal } from "solid-js";
 
 function HeroSection() {
-    
   return (
     <>
       <div class="w-11/12 mx-auto my-0 flex flex-col md:flex-row justify-between">
@@ -17,7 +16,7 @@ function HeroSection() {
           </h2>
           <div class="pt-12">
             <A
-              href="#"
+              href="/about"
               class="bg-cyan-800 hover:opacity-60 p-4 rounded-3xl text-lg md:text-xl text-white"
             >
               Learn more about us

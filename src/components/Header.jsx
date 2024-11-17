@@ -1,6 +1,6 @@
 import { A } from "@solidjs/router";
-import logo from "./ecwa-scholars-conference-logo.png";
-import heroImg from "./assets/images/ECWA-Scholars-Conference.png";
+import logo from "../ecwa-scholars-conference-logo.png";
+import heroImg from "../assets/images/ECWA-Scholars-Conference.png";
 import { createSignal } from "solid-js";
 
 function Header() {
@@ -33,26 +33,26 @@ function Header() {
             </h2>
             <div class="my-6">
               <ul class="space-y-8 text-xl">
-                <li class="md:hidden">
+                <li class="md:hidden pt-4">
                   <A
-                    href="/"
+                    href="/membership"
                     class="bg-red-800 hover:bg-cyan-800 p-3 text-white rounded-xl"
                   >
                     Membership
                   </A>
                 </li>
-                <li>
-                  <A href="/" class="hover:text-red-600">
+                <li class="pt-4">
+                  <A href="/about" class="hover:text-red-600">
                     About
                   </A>
                 </li>
                 <li>
-                  <A href="/" class="hover:text-red-600">
+                  <A href="/contact" class="hover:text-red-600">
                     Contact
                   </A>
                 </li>
                 <li>
-                  <A href="/" class="hover:text-red-600">
+                  <A href="/news" class="hover:text-red-600">
                     News
                   </A>
                 </li>
@@ -70,7 +70,7 @@ function Header() {
         <div class="flex uppercase text-base space-x-8 md:mt-3">
           <div class="hidden md:block md:pt-5">
             <A
-              href="/"
+              href="/membership"
               class="bg-red-800 hover:bg-cyan-800 p-3 text-white rounded-xl"
             >
               Membership
