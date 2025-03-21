@@ -53,7 +53,7 @@ function Header() {
                 </li>
                 <li>
                   <A href="/news" class="hover:text-red-600">
-                    News
+                    News & Events
                   </A>
                 </li>
               </ul>
