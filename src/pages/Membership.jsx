@@ -1,4 +1,5 @@
 import { createSignal } from "solid-js";
+import { MetaProvider, Title, Link, Meta } from "@solidjs/meta";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import introImg from "../assets/images/membership-ESC-Inuaguration-ECWA-Headquarters.jpg";
@@ -6,6 +7,13 @@ import introImg from "../assets/images/membership-ESC-Inuaguration-ECWA-Headquar
 function Membership() {
   return (
     <>
+    <MetaProvider>
+      <Title>ECWA Scholars Conference Membership</Title>
+      <Link rel="canonical" href="https://ecwascholarsconference.org/" />
+      <Meta
+        name="description"
+        content="Membership of ECWA Scholars Conference."
+      />
       <Header />
       <div class="w-11/12 mx-auto my-10 md:my-20 text-slate-800">
         <h2 class="text-center md:text-left uppercase text-3xl md:text-4xl font-semibold">
@@ -53,6 +61,7 @@ function Membership() {
         </div>
       </div>
       <Footer />
+      </MetaProvider>
     </>
   );
 }

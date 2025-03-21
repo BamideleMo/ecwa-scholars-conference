@@ -1,4 +1,5 @@
 import { createSignal, Match, Switch } from "solid-js";
+import { MetaProvider, Title, Link, Meta } from "@solidjs/meta";
 import { A, useParams, useNavigate } from "@solidjs/router";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -48,118 +49,127 @@ function Read() {
   const params = useParams();
   return (
     <>
-      <Header />
-      <div class="w-11/12 mx-auto my-10 md:my-20 text-slate-800">
-        <h2 class="text-center md:text-left uppercase text-3xl md:text-4xl font-semibold">
-          <Switch>
-            <Match
-              when={
-                params.slug ===
-                "ECWA-Scholars-Summit-Conference-2024-View-download-flier-for-details"
-              }
-            >
-              ECWA Scholars Summit/Conference 2024: View & download flier for
-              details
-            </Match>
-            <Match
-              when={
-                params.slug ===
-                "recap-and-pictures-from-ECWA-Scholars-Summit-Conference-2024"
-              }
-            >
-              Radio (News) recap and pictures from ECWA Scholars
-              Summit/Conference 2024.
-            </Match>
-          </Switch>
-        </h2>
-        <div class="w-full sm:w-1/2 mx-auto">
-          <Switch>
-            <Match
-              when={
-                params.slug ===
-                "ECWA-Scholars-Summit-Conference-2024-View-download-flier-for-details"
-              }
-            >
-              <>
-                <p class="py-10">
-                  <a
-                    href={flierPDF}
-                    target="_blank"
-                    class="text-red-600 hover:opacity-60 border-b border-blue-600"
-                  >
-                    View/Download Flier (PDF)
-                  </a>
-                </p>
-                <p>
-                  <img src={flier} class="w-full" />
-                </p>
-              </>
-            </Match>
-            <Match
-              when={
-                params.slug ===
-                "recap-and-pictures-from-ECWA-Scholars-Summit-Conference-2024"
-              }
-            >
-              <>
-                <div class="space-y-6 my-10">
-                  <p class="">
-                    News recap of ECWA Scholars Summit Conference 2024 on radio:
+      <MetaProvider>
+        <Title>Read News and publications by ECWA Scholars Conference</Title>
+        <Link rel="canonical" href="https://ecwascholarsconference.org/" />
+        <Meta
+          name="description"
+          content="Read News and publications by ECWA Scholars Conference."
+        />
+        <Header />
+        <div class="w-11/12 mx-auto my-10 md:my-20 text-slate-800">
+          <h2 class="text-center md:text-left uppercase text-3xl md:text-4xl font-semibold">
+            <Switch>
+              <Match
+                when={
+                  params.slug ===
+                  "ECWA-Scholars-Summit-Conference-2024-View-download-flier-for-details"
+                }
+              >
+                ECWA Scholars Summit/Conference 2024: View & download flier for
+                details
+              </Match>
+              <Match
+                when={
+                  params.slug ===
+                  "recap-and-pictures-from-ECWA-Scholars-Summit-Conference-2024"
+                }
+              >
+                Radio (News) recap and pictures from ECWA Scholars
+                Summit/Conference 2024.
+              </Match>
+            </Switch>
+          </h2>
+          <div class="w-full sm:w-1/2 mx-auto">
+            <Switch>
+              <Match
+                when={
+                  params.slug ===
+                  "ECWA-Scholars-Summit-Conference-2024-View-download-flier-for-details"
+                }
+              >
+                <>
+                  <p class="py-10">
+                    <a
+                      href={flierPDF}
+                      target="_blank"
+                      class="text-red-600 hover:opacity-60 border-b border-blue-600"
+                    >
+                      View/Download Flier (PDF)
+                    </a>
                   </p>
                   <p>
-                    <audio controls>
-                      <source src="horse.ogg" type="audio/ogg" />
-                      <source src={audio} type="audio/mpeg" />
-                      Your browser does not support the audio element.
-                    </audio>
+                    <img src={flier} class="w-full" />
                   </p>
-                  <p class="">
-                    Pictures from the 2024 ECWA Scholars Summit Conference:
-                  </p>
-                  <p class="space-y-6">
-                    <img src={recapImg1} class="w-full rounded-3xl block" />
-                    <img src={recapImg2} class="w-full rounded-3xl block" />
-                    <img src={recapImg3} class="w-full rounded-3xl block" />
-                    <img src={recapImg4} class="w-full rounded-3xl block" />
-                    <img src={recapImg5} class="w-full rounded-3xl block" />
-                    <img src={recapImg6} class="w-full rounded-3xl block" />
-                    <img src={recapImg7} class="w-full rounded-3xl block" />
-                    <img src={recapImg8} class="w-full rounded-3xl block" />
-                    <img src={recapImg9} class="w-full rounded-3xl block" />
-                    <img src={recapImg11} class="w-full rounded-3xl block" />
-                    <img src={recapImg12} class="w-full rounded-3xl block" />
-                    <img src={recapImg13} class="w-full rounded-3xl block" />
-                    <img src={recapImg14} class="w-full rounded-3xl block" />
-                    <img src={recapImg15} class="w-full rounded-3xl block" />
-                    <img src={recapImg16} class="w-full rounded-3xl block" />
-                    <img src={recapImg17} class="w-full rounded-3xl block" />
-                    <img src={recapImg18} class="w-full rounded-3xl block" />
-                    <img src={recapImg19} class="w-full rounded-3xl block" />
-                    <img src={recapImg20} class="w-full rounded-3xl block" />
-                    <img src={recapImg21} class="w-full rounded-3xl block" />
-                    <img src={recapImg22} class="w-full rounded-3xl block" />
-                    <img src={recapImg23} class="w-full rounded-3xl block" />
-                    <img src={recapImg24} class="w-full rounded-3xl block" />
-                    <img src={recapImg25} class="w-full rounded-3xl block" />
-                    <img src={recapImg26} class="w-full rounded-3xl block" />
-                    <img src={recapImg27} class="w-full rounded-3xl block" />
-                    <img src={recapImg28} class="w-full rounded-3xl block" />
-                    <img src={recapImg29} class="w-full rounded-3xl block" />
-                    <img src={recapImg30} class="w-full rounded-3xl block" />
-                    <img src={recapImg31} class="w-full rounded-3xl block" />
-                    <img src={recapImg32} class="w-full rounded-3xl block" />
-                    <img src={recapImg33} class="w-full rounded-3xl block" />
-                    <img src={recapImg34} class="w-full rounded-3xl block" />
-                    <img src={recapImg35} class="w-full rounded-3xl block" />
-                    <img src={recapImg36} class="w-full rounded-3xl block" />
-                  </p>
-                </div>
-              </>
-            </Match>
-          </Switch>
+                </>
+              </Match>
+              <Match
+                when={
+                  params.slug ===
+                  "recap-and-pictures-from-ECWA-Scholars-Summit-Conference-2024"
+                }
+              >
+                <>
+                  <div class="space-y-6 my-10">
+                    <p class="">
+                      News recap of ECWA Scholars Summit Conference 2024 on
+                      radio:
+                    </p>
+                    <p>
+                      <audio controls>
+                        <source src="horse.ogg" type="audio/ogg" />
+                        <source src={audio} type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                      </audio>
+                    </p>
+                    <p class="">
+                      Pictures from the 2024 ECWA Scholars Summit Conference:
+                    </p>
+                    <p class="space-y-6">
+                      <img src={recapImg1} class="w-full rounded-3xl block" />
+                      <img src={recapImg2} class="w-full rounded-3xl block" />
+                      <img src={recapImg3} class="w-full rounded-3xl block" />
+                      <img src={recapImg4} class="w-full rounded-3xl block" />
+                      <img src={recapImg5} class="w-full rounded-3xl block" />
+                      <img src={recapImg6} class="w-full rounded-3xl block" />
+                      <img src={recapImg7} class="w-full rounded-3xl block" />
+                      <img src={recapImg8} class="w-full rounded-3xl block" />
+                      <img src={recapImg9} class="w-full rounded-3xl block" />
+                      <img src={recapImg11} class="w-full rounded-3xl block" />
+                      <img src={recapImg12} class="w-full rounded-3xl block" />
+                      <img src={recapImg13} class="w-full rounded-3xl block" />
+                      <img src={recapImg14} class="w-full rounded-3xl block" />
+                      <img src={recapImg15} class="w-full rounded-3xl block" />
+                      <img src={recapImg16} class="w-full rounded-3xl block" />
+                      <img src={recapImg17} class="w-full rounded-3xl block" />
+                      <img src={recapImg18} class="w-full rounded-3xl block" />
+                      <img src={recapImg19} class="w-full rounded-3xl block" />
+                      <img src={recapImg20} class="w-full rounded-3xl block" />
+                      <img src={recapImg21} class="w-full rounded-3xl block" />
+                      <img src={recapImg22} class="w-full rounded-3xl block" />
+                      <img src={recapImg23} class="w-full rounded-3xl block" />
+                      <img src={recapImg24} class="w-full rounded-3xl block" />
+                      <img src={recapImg25} class="w-full rounded-3xl block" />
+                      <img src={recapImg26} class="w-full rounded-3xl block" />
+                      <img src={recapImg27} class="w-full rounded-3xl block" />
+                      <img src={recapImg28} class="w-full rounded-3xl block" />
+                      <img src={recapImg29} class="w-full rounded-3xl block" />
+                      <img src={recapImg30} class="w-full rounded-3xl block" />
+                      <img src={recapImg31} class="w-full rounded-3xl block" />
+                      <img src={recapImg32} class="w-full rounded-3xl block" />
+                      <img src={recapImg33} class="w-full rounded-3xl block" />
+                      <img src={recapImg34} class="w-full rounded-3xl block" />
+                      <img src={recapImg35} class="w-full rounded-3xl block" />
+                      <img src={recapImg36} class="w-full rounded-3xl block" />
+                    </p>
+                  </div>
+                </>
+              </Match>
+            </Switch>
+          </div>
         </div>
-      </div>
-      <Footer />
+        <Footer />
+      </MetaProvider>
     </>
   );
 }
